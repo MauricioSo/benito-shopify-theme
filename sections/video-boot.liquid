@@ -1,0 +1,75 @@
+<hr>
+<div id="section-cta">
+  <div class="section-header text-center">
+    <h3> {{ section.settings.text-box }} </h3>
+  </div>
+  <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://www.youtube.com/embed/{{section.settings.video_url.id}}?autoplay=1' frameborder='0' allowfullscreen></iframe></div>
+  {% for block in section.blocks %}  
+  <div class="btn" id="call-to-action">   
+    <a href="{{ block.settings.link }}" class="btn">{{ block.settings.linktext }}</a>
+  </div> 
+  {% endfor %}
+
+</div>  
+<hr>
+{% schema %}
+{
+  "name": "CTA Blocks",
+	"max_blocks": 3,
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Heading",
+      "default": "Title"
+    },
+ {
+  "id": "video_url",
+  "type": "video_url",
+  "label": "Video URL",
+  "accept": ["youtube", "vimeo"],
+  "info": "Text",
+  "placeholder": "Text"
+}
+  ],
+  "blocks": [
+    {
+      "type": "select",
+      "name": "Add Button",
+      "settings": [
+        {
+          "id": "link",
+          "type": "url",
+       		"label": "Button link"
+        },
+        {
+          "id": "linktext",
+          "type": "text",
+          "label": "Button text",
+          "default": "Click here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Call to Action Blocks",
+      "category": "CTA button",
+      "blocks": [
+        { 
+          "type": "select"
+        },
+        {
+          "type": "select"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
