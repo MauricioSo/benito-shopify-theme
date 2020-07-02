@@ -1,0 +1,47 @@
+
+<div class="container-fluid no-gutters" >
+    <div class="title">{{section.settings.title }}</div>
+    <img style="width: 100%" class="img" src="{{ section.settings.Headmaster | img_url: '2200x1500' }}" />
+
+</div> 
+
+{% schema %}
+{
+  "name": "Headmaster",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "Headmaster",
+      "label": "Headmaster"
+    },
+    {
+      "type":      "text",
+      "id":        "title",
+      "label":     "title",
+      "default":   "BENITO",
+      "info":      "Text",
+      "placeholder": "title"
+}
+  ],
+ "presets": [  
+    {
+      "name": "hero-benito",
+      "category": "hero"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+
+.container-fluid {
+   padding: 0px;
+}
+.img {
+    width: 100vw;
+    height: 100vh; 
+}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
