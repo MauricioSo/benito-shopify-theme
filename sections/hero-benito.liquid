@@ -1,12 +1,16 @@
 
-<div class="container-fluid no-gutters" >
-    <div class="title">{{section.settings.title }}</div>
-    <img style="width: 100%" class="img" src="{{ section.settings.Headmaster | img_url: '2200x1500' }}" />
-
-</div> 
+<div class="jumbotron card card-image" style="background-position: center center; background-repeat: no-repeat; height: 100vh; background-image: url('{{section.settings.Headmaster |img_url: '1100x' }}' );   background-size: 100% 100%;">
+  <div class="text-white text-center py-5 px-4">
+    <div>
+      <h2 class=" title  card-title h1-responsive pt-3  font-bold " style="color: black; font-size: 3rem;">{{section.settings.title}}</h2>
+     
+      
+    </div>
+  </div>
+</div>
 
 {% schema %}
-{
+{   
   "name": "Headmaster",
   "settings": [
     {
@@ -19,7 +23,7 @@
       "id":        "title",
       "label":     "title",
       "default":   "BENITO",
-      "info":      "Text",
+      
       "placeholder": "title"
 }
   ],
@@ -37,10 +41,16 @@
 .container-fluid {
    padding: 0px;
 }
-.img {
-    width: 100vw;
-    height: 100vh; 
+
+
+
 }
+
+.main-content {
+ padding: -35px; 
+ 
+}
+
 {% endstylesheet %}
 
 {% javascript %}
