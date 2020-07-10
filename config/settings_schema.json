@@ -8,6 +8,33 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "default": "helvetica_n4",
+        "label": "Headings"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "default": "helvetica_n4",
+        "label": "Body text"
+      },
+      {
+        "type": "header",
+        "content": "Main Heading Text"
+      },
+      {
+        "type": "font_picker",
+        "id": "Main_heading_font_new",
+        "label": "Main heading Font",
+        "default": "work_sans_n6"
+      }
+    ]
+  },
+  {
     "name": {
       "da": "Farver",
       "de": "Farben",

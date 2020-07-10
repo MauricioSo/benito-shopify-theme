@@ -1,13 +1,62 @@
 
-<div class="jumbotron card card-image" style="background-position: center center; background-repeat: no-repeat; height: 100vh; background-image: url('{{section.settings.Headmaster |img_url: '1100x' }}' );   background-size: 100% 100%;">
-  <div class="text-white text-center py-5 px-4">
-    <div>
-      <h2 class=" title  card-title h1-responsive pt-3  font-bold " style="color: black; font-size: 3rem;">{{section.settings.title}}</h2>
-     
-      
+
+<div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('{{section.settings.Headmaster |img_url: '1100x' }}'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+      <!-- Content -->
+      <div class="container">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-12 mb-4 white-text text-center">
+            <h1 class="title-hero  h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 wow fadeInDown"
+              data-wow-delay="0.3s"><strong>{{section.settings.title}}</strong></h1>
+            <hr class="hr-light my-4 wow fadeInDown" data-wow-delay="0.4s">
+            <h5 class="text-uppercase mb-4 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Photography
+                & design</strong></h5>
+            <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">portfolio</a>
+            <a class="btn btn-outline-white wow fadeInDown" data-wow-delay="0.4s">About me</a>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Content -->
     </div>
+    <!-- Mask & flexbox options-->
   </div>
-</div>
+
+<style lang='scss'>
+{% assign header_font = section.settings.title_hero %}
+{{ header_font | font_face }}
+
+.title-hero {
+  font-family: '{{header_font.family}}'; 
+}
+
+
+.container {
+  height: 100vh; 
+}
+
+    
+  h1 {
+    letter-spacing: 8px;
+  }
+
+  h5 {
+    letter-spacing: 3px;
+  }
+
+  .hr-light {
+    border-top: 3px solid #fff;
+    width: 80px;
+  }
+</style>
+<script>
+
+new WOW().init();
+</script>
 
 {% schema %}
 {   
@@ -25,11 +74,18 @@
       "default":   "BENITO",
       
       "placeholder": "title"
+     
+},
+ {
+   "type":    "font_picker",
+   "label":   "Text",
+   "id":      "title_hero",
+   "default": "helvetica_n4"
 }
   ],
  "presets": [  
     {
-      "name": "hero-benito",
+      "name": "hero_benito",
       "category": "hero"
     }
   ]
@@ -44,7 +100,7 @@
 
 
 
-}
+
 
 .main-content {
  padding: -35px; 

@@ -14,6 +14,8 @@
   {{ '//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' | script_tag  }}
 
   {{ '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' | script_tag }}
+   {{ '//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js' | script_tag }}
+   {{ '//cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css' | stylesheet_tag }}
 
   {%- if settings.favicon != blank -%}
     <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
