@@ -1,6 +1,8 @@
-<div class="container my-5 py-5 z-depth-1">
+<div class="total">
 
- 
+<div class="container pt-5 pb-2  px-5  z-depth-1">
+
+ <h1 class="title-blog-section mb-5">{{section.settings.title}}</h1>
     <!--Section: Content-->
     <section class="px-md-5 mx-md-5 dark-grey-text text-center text-lg-left">
 
@@ -18,13 +20,13 @@
         <!--Grid column-->
         <div class="col-lg-6 mb-4 mb-lg-0">
 
-          <h3 class="font-weight-bold">{{section.settings.title}}</h3>
+          <h3 class="font-weight-bold my-4">{{section.settings.title-blog}}</h3>
 
           <p class="font-weight-bold">{{section.settings.subtitle}}</p>
 
-          <p class="text-muted">{{section.settings.text}}</p>
+          <p class="text-muted my-4" >{{section.settings.text}}</p>
 
-          <a class="font-weight-bold" href="#" >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+          <a class="btn btn-outline-white my-4" href="#" >Saber más</a>
 
         </div>
         <!--Grid column-->
@@ -39,10 +41,24 @@
 
   </div>
 
+</div>
+
+
+<style lang="scss">
+.container {
+  height: auto; 
+  text-align: center; 
+}
+
+.total {
+  width: 100vw; 
+  background-color: #E5E5E5; 
+}
+</style>
 
 {% schema %}
 {   
-  "name": "cta",
+  "name": "blog",
   "settings": [
     {
       "type": "image_picker",
@@ -55,10 +71,16 @@
       "label":     "title",
       "placeholder": "title"
 },
+{
+      "type":      "text",
+      "id":        "title-blog",
+      "label":     "Title blog",
+      "placeholder": "title"
+},
     {
       "type":      "text",
-      "id":        "subtitle",
-      "label":     "subtitle",
+      "id":        "title-post",
+      "label":     "title post",
       "placeholder": "subtitle"
 },
 {
@@ -69,8 +91,8 @@
   ],
  "presets": [  
     {
-      "name": "cta",
-      "category": "cta"
+      "name": "blog",
+      "category": "blog"
     }
   ]
 }

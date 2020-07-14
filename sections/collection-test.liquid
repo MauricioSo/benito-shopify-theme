@@ -1,47 +1,127 @@
 
+<div class="container d-flex flex-column mb-3">
 
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+<h1 class="nuevas-colecciones" style="align-self:center; margin-top: 55px; margin-bottom: 55px; ">{{section.settings.title}} </h1>
+
+
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{section.settings.fotos-test | img_url: '500x'}}" class="d-block w-100" alt="...">
+      <img src="{{section.settings.foto1 | img_url: '500x'}}" alt="nuevas colecciones" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>{{section.settings.title-1}}</h3>
+        <div class="text">{{section.settings.texto-1}}</div>
+      </div>   
     </div>
     <div class="carousel-item">
-      <img src="{{section.settings.fotos-test | img_url: '500x'}}" class="d-block w-100" alt="...">
+      <img src="{{section.settings.foto2 | img_url: '500x'}}" alt="nuevas colecciones" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>{{section.settings.title-2}}</h3>
+        <div class="text">{{section.settings.texto-2}}</div>
+      </div>   
     </div>
     <div class="carousel-item">
-      <img src="{{section.settings.fotos-test | img_url: '500x' }}" class="d-block w-100" alt="...">
+      <img src="{{section.settings.foto3 | img_url: '500x'}}" alt="nuevas colecciones" width="1100" height="500">
+      <div class="carousel-caption">
+        <h3>{{section.settings.title-3}}</h3>
+        <div class="text">{{section.settings.texto-3}}</div>
+      </div>   
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
   </a>
+  
+
 </div>
+</div>
+</div>
+    
+    <style>
+  .carousel-caption {
+  
+    background-color: rgba(0, 0, 0, 0.5)!important;
+  }
+  .text p {
+    color: #dedede; 
+  }
+   
+    </style>
   {% schema %}
 {   
   "name": "Headmaster",
   "settings": [
     {
-      "type": "image_picker",
-      "id": "Headmaster",
-      "label": "Headmaster"
-    },
-    {
       "type":      "text",
       "id":        "title",
       "label":     "title",
-      "default":   "BENITO",
+      "default":   "NUEVAS COLECCIONES",
       
-      "placeholder": "title"
-},
-{
+      "placeholder": "escriba un título"
+   },
+   {
+      "type":      "text",
+      "id":        "title-1",
+      "label":     "title",
+      "default":   "nuevas coleccion",
+      
+      "placeholder": "escriba un título"
+   },
+   {
+   "type": "richtext",
+   "id": "texto-1",
+   "label": "Text"
+   },
+  {
+      "type":      "text",
+      "id":        "title-2",
+      "label":     "title",
+      "default":   "nuevas coleccion",
+      
+      "placeholder": "escriba un título"
+   },
+   {
+   "type": "richtext",
+   "id": "texto-2",
+   "label": "Text"
+   },{
+      "type":      "text",
+      "id":        "title-3",
+      "label":     "title",
+      "default":   "nuevas coleccion",
+      
+      "placeholder": "escriba un título"
+   },
+   {
+   "type": "richtext",
+   "id": "texto-3",
+   "label": "Text"
+   },
+    {
       "type": "image_picker",
-      "id": "fotos-test",
-      "label": "fotos-test"
+      "id": "foto1",
+      "label": "Headmaster"
+    },
+    
+    {
+      "type": "image_picker",
+      "id": "foto2",
+      "label": "fotos2"
+    },
+    {
+      "type": "image_picker",
+      "id": "foto3",
+      "label": "fotos3"
     }
   ],
  "presets": [  
